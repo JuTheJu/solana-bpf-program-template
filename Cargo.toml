@@ -5,8 +5,14 @@ edition = "2021"
 license = "WTFPL"
 publish = false
 
+[features]
+no-entrypoint = []
+
 [dependencies]
-solana-program = "=1.14.7"
+solana-program = "=1.14.6"
+thiserror = "1.0.37"
+spl-token = {version = "3.5.0", features = ["no-entrypoint"]}
+arrayref = "0.3.6"
 
 [lib]
 crate-type = ["cdylib", "lib"]
